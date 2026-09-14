@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMPACTUS Studio — Artes Marciais & Movimento</title>
+<meta name="description" content="Studio de artes marciais com a verdadeira tradição das lutas. Metodologia estruturada, turmas reduzidas e ambiente acolhedor para toda a família.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ivory: '#F7F5F0', paper: '#FBFAF7', ink: '#211F1B', graphite: '#4A473E',
+          mist: '#8A8577', bronze: '#A9824A', bronzedeep: '#8A6A38', line: '#E4DFD2', sand: '#EEE9DD',
+        },
+        fontFamily: { display: ['Manrope', 'sans-serif'], body: ['Inter', 'sans-serif'], },
+        letterSpacing: { tightest: '-0.04em', }
+      }
+    }
+  }
+</script>
+</head>
+
+<body class="bg-ivory text-ink font-body antialiased">
+
+<!-- ===================== HEADER / NAVBAR ===================== -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-ivory/90 backdrop-blur-md border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+
+      <a href="#top" class="flex items-center gap-2 shrink-0">
+        <img src="impactuslogohori.png" alt="Logo Impactus Studio" class="h-10 md:h-12 w-auto">
+      </a>
+        
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-9 text-[15px] font-medium text-graphite">
+        <a href="#conceito" class="nav-link">A Metodologia</a>
+        <a href="#modalidades" class="nav-link">Modalidades</a>
+        <a href="#infraestrutura" class="nav-link">Infraestrutura</a>
+        <a href="#horarios" class="nav-link">Horários</a>
+        <a href="#faq" class="nav-link">Dúvidas</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20na%20IMPACTUS%20Studio."
+           target="_blank" rel="noopener"
+           class="hidden md:inline-flex items-center gap-2 bg-ink text-ivory text-sm font-semibold px-5 py-3 hover:bg-bronzedeep transition-colors duration-300">
+          Agendar Aula Experimental
+        </a>
+
+        <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-[5px]">
+          <span class="menu-bar block w-6 h-[1.5px] bg-ink transition-transform duration-300"></span>
+          <span class="menu-bar block w-6 h-[1.5px] bg-ink transition-opacity duration-300"></span>
+          <span class="menu-bar block w-6 h-[1.5px] bg-ink transition-transform duration-300"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="lg:hidden max-h-0 opacity-0 overflow-hidden bg-ivory border-t border-line">
+    <nav class="flex flex-col px-6 py-6 gap-5 text-[17px] font-medium text-graphite">
+      <a href="#conceito" class="mobile-link">A Metodologia</a>
+      <a href="#modalidades" class="mobile-link">Modalidades</a>
+      <a href="#infraestrutura" class="mobile-link">Infraestrutura</a>
+      <a href="#horarios" class="mobile-link">Horários</a>
+      <a href="#faq" class="mobile-link">Dúvidas</a>
+      <a href="#contato" class="mobile-link">Contato</a>
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20na%20IMPACTUS%20Studio."
+         target="_blank" rel="noopener"
+         class="mt-2 text-center bg-ink text-ivory font-semibold px-5 py-3.5">
+        Agendar Aula Experimental
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="pt-28 pb-16 md:pt-40 md:pb-28 px-5 md:px-8">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+      <div class="lg:col-span-7 fade-up">
+        <p class="text-sm md:text-base text-bronze font-semibold mb-5 tracking-wide">Tradição, Foco e Cuidado</p>
+        <h1 class="font-display font-extrabold text-[2.5rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-[3.5rem] text-ink tracking-tightest mb-6">
+          A verdadeira tradição da luta em um ambiente familiar e acolhedor.
+        </h1>
+        <p class="text-lg md:text-xl text-graphite max-w-xl leading-relaxed mb-9">
+          Aprenda no seu ritmo com o Mestre Ivan. Uma metodologia sólida que une teoria e prática em um espaço dedicado, pessoal e confortável para você e sua família.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20agendar%20uma%20aula%20experimental%20na%20IMPACTUS%20Studio."
+             target="_blank" rel="noopener"
+             class="inline-flex items-center justify-center gap-2 bg-ink text-ivory font-semibold px-7 py-4 text-[15px] hover:bg-bronzedeep transition-colors duration-300">
+            Falar com a equipe no WhatsApp
+          </a>
+          <a href="#modalidades" class="inline-flex items-center justify-center gap-2 border border-ink/20 text-ink font-semibold px-7 py-4 text-[15px] hover:border-ink transition-colors duration-300">
+            Ver modalidades
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 fade-up">
+        <div class="photo-frame aspect-[4/5] w-full relative overflow-hidden bg-line">
+          <img src="academia.jpg" alt="Ambiente da IMPACTUS Studio" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== O CONCEITO / DIFERENCIAIS ===================== -->
+  <section id="conceito" class="py-20 md:py-28 px-5 md:px-8 bg-paper border-y border-line">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-14 fade-up">
+        <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight text-ink tracking-tightest mb-5">
+          O que faz o nosso ensino ser diferente
+        </h2>
+        <p class="text-graphite text-lg leading-relaxed">
+          Tradição de verdade não precisa ser intimidadora. Nosso foco é o seu aprendizado contínuo, construindo uma base técnica inabalável com total conforto e atenção pessoal.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="group relative bg-white p-8 md:p-9 border border-line hover:border-bronze transition-colors duration-300 overflow-hidden shadow-sm fade-up">
+          <span class="absolute -bottom-4 -right-2 text-[8rem] font-display font-extrabold text-sand/40 select-none z-0 group-hover:text-bronze/10 transition-colors duration-300">1</span>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-ink text-bronze flex items-center justify-center mb-6 rounded-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">Linhagem Tradicional</h3>
+            <p class="text-graphite text-[15px] leading-relaxed">O Mestre Ivan se formou com Gilbert Almeida, que estudou na Tailândia. Trazemos a autêntica essência das artes marciais para o tatame.</p>
+          </div>
+        </div>
+
+        <div class="group relative bg-white p-8 md:p-9 border border-line hover:border-bronze transition-colors duration-300 overflow-hidden shadow-sm fade-up">
+          <span class="absolute -bottom-4 -right-2 text-[8rem] font-display font-extrabold text-sand/40 select-none z-0 group-hover:text-bronze/10 transition-colors duration-300">2</span>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-ink text-bronze flex items-center justify-center mb-6 rounded-sm">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">Base Conectada</h3>
+            <p class="text-graphite text-[15px] leading-relaxed">As aulas têm treino, foco e ensino teórico. Elas se conectam umas com as outras, garantindo que você entenda o "porquê" de cada movimento.</p>
+          </div>
+        </div>
+
+        <div class="group relative bg-white p-8 md:p-9 border border-line hover:border-bronze transition-colors duration-300 overflow-hidden shadow-sm fade-up">
+          <span class="absolute -bottom-4 -right-2 text-[8rem] font-display font-extrabold text-sand/40 select-none z-0 group-hover:text-bronze/10 transition-colors duration-300">3</span>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-ink text-bronze flex items-center justify-center mb-6 rounded-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.35-9.5-8.8C.7 8.7 2.4 5 6 5c2 0 3.3 1 4 2.2C10.7 6 12 5 14 5c3.6 0 5.3 3.7 3.5 7.2C19 16.65 12 21 12 21z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">Ambiente Familiar</h3>
+            <p class="text-graphite text-[15px] leading-relaxed">Um espaço seguro, limpo e acolhedor. Desenvolvido para receber iniciantes, mulheres e famílias de braços abertos, sem qualquer intimidação.</p>
+          </div>
+        </div>
+
+        <div class="group relative bg-white p-8 md:p-9 border border-line hover:border-bronze transition-colors duration-300 overflow-hidden shadow-sm fade-up">
+          <span class="absolute -bottom-4 -right-2 text-[8rem] font-display font-extrabold text-sand/40 select-none z-0 group-hover:text-bronze/10 transition-colors duration-300">4</span>
+          <div class="relative z-10">
+            <div class="w-12 h-12 bg-ink text-bronze flex items-center justify-center mb-6 rounded-sm">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="font-display font-bold text-xl text-ink mb-3">No Seu Ritmo</h3>
+            <p class="text-graphite text-[15px] leading-relaxed">Nossa equipe é dedicada, atenciosa e próxima. Acompanhamos a sua evolução respeitando o seu tempo, seus limites e os seus objetivos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HUB DE MODALIDADES ===================== -->
+  <section id="modalidades" class="py-20 md:py-28 px-5 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12 fade-up">
+        <div class="max-w-xl">
+          <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight text-ink tracking-tightest mb-5">Modalidades</h2>
+          <p class="text-graphite text-lg leading-relaxed">Do técnico ao restaurativo — uma grade completa para a sua saúde.</p>
+        </div>
+        <div id="filter-tabs" class="flex flex-wrap gap-2 shrink-0">
+          <button data-filter="todas" data-active="true" class="tab-btn flex items-center gap-2 px-5 py-2.5 border border-ink/15 text-sm font-semibold text-ink transition-colors duration-300">
+            <span class="tab-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Todas
+          </button>
+          <button data-filter="lutas" data-active="false" class="tab-btn flex items-center gap-2 px-5 py-2.5 border border-ink/15 text-sm font-semibold text-ink transition-colors duration-300">
+            <span class="tab-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Lutas
+          </button>
+          <button data-filter="corpo-mente" data-active="false" class="tab-btn flex items-center gap-2 px-5 py-2.5 border border-ink/15 text-sm font-semibold text-ink transition-colors duration-300">
+            <span class="tab-dot w-1.5 h-1.5 rounded-full bg-transparent"></span> Corpo &amp; Mente
+          </button>
+        </div>
+      </div>
+      <div id="modalities-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Cards inseridos via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INFRAESTRUTURA ===================== -->
+  <section id="infraestrutura" class="py-20 md:py-28 px-5 md:px-8 bg-paper border-y border-line">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-14 fade-up">
+        <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight text-ink tracking-tightest mb-5">Um tour pelo espaço</h2>
+        <p class="text-graphite text-lg leading-relaxed">Cada ambiente foi desenhado para proporcionar foco no treino e um extremo conforto antes e depois da aula.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 fade-up">
+        <div class="photo-frame aspect-[3/4] flex flex-col items-center justify-center gap-4 px-6 text-center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" class="text-mist"><path d="M4 8.5C4 7.67 4.67 7 5.5 7H7.8L8.6 5.4C8.86 4.87 9.4 4.5 10 4.5H14C14.6 4.5 15.14 4.87 15.4 5.4L16.2 7H18.5C19.33 7 20 7.67 20 8.5V17.5C20 18.33 19.33 19 18.5 19H5.5C4.67 19 4 18.33 4 17.5V8.5Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span class="text-[11px] md:text-xs uppercase tracking-[0.16em] text-mist font-semibold leading-relaxed">Foto do Tatame Aqui</span>
+        </div>
+        <div class="photo-frame aspect-[3/4] flex flex-col items-center justify-center gap-4 px-6 text-center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" class="text-mist"><path d="M4 8.5C4 7.67 4.67 7 5.5 7H7.8L8.6 5.4C8.86 4.87 9.4 4.5 10 4.5H14C14.6 4.5 15.14 4.87 15.4 5.4L16.2 7H18.5C19.33 7 20 7.67 20 8.5V17.5C20 18.33 19.33 19 18.5 19H5.5C4.67 19 4 18.33 4 17.5V8.5Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span class="text-[11px] md:text-xs uppercase tracking-[0.16em] text-mist font-semibold leading-relaxed">Foto dos Vestiários Aqui</span>
+        </div>
+        <div class="photo-frame aspect-[3/4] flex flex-col items-center justify-center gap-4 px-6 text-center">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" class="text-mist"><path d="M4 8.5C4 7.67 4.67 7 5.5 7H7.8L8.6 5.4C8.86 4.87 9.4 4.5 10 4.5H14C14.6 4.5 15.14 4.87 15.4 5.4L16.2 7H18.5C19.33 7 20 7.67 20 8.5V17.5C20 18.33 19.33 19 18.5 19H5.5C4.67 19 4 18.33 4 17.5V8.5Z" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="13" r="3.4" stroke="currentColor" stroke-width="1.4"/></svg>
+          <span class="text-[11px] md:text-xs uppercase tracking-[0.16em] text-mist font-semibold leading-relaxed">Foto da Recepção Aqui</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HORÁRIOS ===================== -->
+  <section id="horarios" class="py-20 md:py-28 px-5 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-14 fade-up">
+        <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight text-ink tracking-tightest mb-5">Grade de aulas</h2>
+        <p class="text-graphite text-lg leading-relaxed">Vagas limitadas por horário para manter a qualidade e o conforto do ensino. Confirme disponibilidade.</p>
+      </div>
+      <div id="schedule-grid" class="grid md:grid-cols-3 lg:grid-cols-5 gap-4 fade-up">
+        <!-- Cards inseridos via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="py-20 md:py-28 px-5 md:px-8 bg-paper border-t border-line">
+    <div class="max-w-4xl mx-auto">
+      <div class="mb-14 text-center fade-up">
+        <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight text-ink tracking-tightest mb-5">Dúvidas Frequentes</h2>
+      </div>
+      <div class="space-y-4 fade-up">
+        <details class="group bg-ivory border border-line p-6 cursor-pointer open:bg-white transition-colors duration-300">
+          <summary class="font-display font-bold text-lg text-ink list-none flex justify-between items-center">A graduação do Muay Thai é válida fora da academia?<span class="text-bronze group-open:rotate-180 transition-transform duration-300">▼</span></summary>
+          <p class="mt-4 text-graphite leading-relaxed text-[15px]">Sim! A Impactus Fight possui aliança com entidades respeitadas nacional e internacionalmente, como a <strong>Federação de Muaythai Mineira (FMTM)</strong> e a <strong>Pairojnoi Muay Thai International Federation</strong>.</p>
+        </details>
+        <details class="group bg-ivory border border-line p-6 cursor-pointer open:bg-white transition-colors duration-300">
+          <summary class="font-display font-bold text-lg text-ink list-none flex justify-between items-center">Vocês aceitam Wellhub e Total Pass?<span class="text-bronze group-open:rotate-180 transition-transform duration-300">▼</span></summary>
+          <p class="mt-4 text-graphite leading-relaxed text-[15px]">Sim, aceitamos! Alunos de aplicativos participam de quase todos os horários, com exceção apenas das turmas de segunda e quarta às 19h.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section id="contato" class="py-20 md:py-28 px-5 md:px-8 bg-ink text-ivory">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12">
+      <div class="lg:col-span-7 fade-up">
+        <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] leading-tight tracking-tightest mb-6">Agende uma visita guiada — sinta-se em casa</h2>
+        <p class="text-ivory/70 text-lg leading-relaxed max-w-xl mb-9">Venha conversar com o Mestre Ivan, conhecer o nosso tatame e sentir o ambiente acolhedor. Sem compromisso.</p>
+        <a href="https://wa.me/5500000000000" class="inline-flex bg-bronze text-ink font-semibold px-7 py-4 hover:bg-ivory transition-colors">Agendar visita pelo WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="px-5 md:px-8 py-12 bg-ink text-ivory/60 border-t border-ivory/10">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+    <div class="flex items-center gap-2">
+      <img src="impactuslogo.png" alt="Logo" class="h-6 w-auto opacity-70">
+      <span class="text-xs uppercase tracking-[0.16em] text-ivory/40">Lutas &amp; Movimento</span>
+    </div>
+    <p class="text-xs text-ivory/30">© 2026 IMPACTUS Studio.</p>
+  </div>
+</footer>
+
+<!-- ===================== MODAL DE MODALIDADE (LIMPO) ===================== -->
+<div id="modal-backdrop" class="fixed inset-0 bg-ink/60 z-[60] hidden opacity-0 flex items-center justify-center px-5">
+  <div id="modal-panel" class="bg-paper max-w-md w-full p-8 md:p-10 opacity-0 scale-95 relative">
+    <button id="modal-close" class="absolute top-5 right-5 text-mist hover:text-ink"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    <p id="modal-category" class="text-xs uppercase tracking-[0.16em] text-bronze font-semibold mb-3"></p>
+    <h3 id="modal-title" class="font-display font-extrabold text-2xl text-ink mb-4"></h3>
+    <p id="modal-description" class="text-graphite leading-relaxed mb-8"></p>
+    <a href="#horarios" id="modal-cta" class="inline-flex w-full items-center justify-center bg-ink text-ivory font-semibold px-6 py-3.5 hover:bg-bronzedeep transition-colors">
+      Ver na grade de horários
+    </a>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background-color: #F7F5F0; color: #211F1B; }
+h1, h2, h3, .font-display { font-family: 'Manrope', sans-serif; }
+
+::selection { background-color: #A9824A; color: #FBFAF7; }
+
+.nav-link { position: relative; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 1px;
+  background-color: #A9824A;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+.tab-btn[data-active="true"] {
+  background-color: #211F1B;
+  color: #FBFAF7;
+}
+.tab-btn[data-active="true"] .tab-dot { background-color: #A9824A; }
+
+.modality-card { display: block; }
+.modality-card[data-hidden="true"] { display: none; }
+
+.photo-frame {
+  background-color: #EFEDE7;
+  background-image:
+    repeating-linear-gradient(45deg, rgba(33,31,27,0.035) 0, rgba(33,31,27,0.035) 1px, transparent 1px, transparent 14px);
+  border: 1px solid #DCD6C7;
+}
+
+#mobile-menu { transition: max-height 0.35s ease, opacity 0.3s ease; }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.is-visible { opacity: 1; transform: translateY(0); }
+
+#modal-backdrop { transition: opacity 0.25s ease; }
+#modal-panel { transition: transform 0.3s ease, opacity 0.3s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #A9824A;
+  outline-offset: 2px;
+}
+
+.whatsapp-float {
+  animation: floatPulse 3.5s ease-in-out infinite;
+}
+@keyframes floatPulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(33,31,27,0.18); }
+  50% { box-shadow: 0 8px 30px rgba(169,130,74,0.35); }
+}
