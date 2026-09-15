@@ -387,8 +387,10 @@ Sei que é só o início de uma longa jornada de aprendizado, erros e acertos, e
         </div>
       </div>
 
+      <!-- Lado Direito: Mapa do Google -->
       <div class="lg:col-span-6 fade-up mt-8 lg:mt-0">
-        <div class="w-full h-[350px] md:h-[450px] bg-ivory/5 border border-ivory/10 relative overflow-hidden group">
+        <div class="w-full h-[350px] md:h-[450px] border border-ivory/10 relative overflow-hidden">
+          
           <iframe
             src="https://maps.google.com/maps?q=Impactus%20Training%20Center,%20Araruama&t=&z=16&ie=UTF8&iwloc=&output=embed"
             width="100%"
@@ -397,8 +399,16 @@ Sei que é só o início de uma longa jornada de aprendizado, erros e acertos, e
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            class="absolute inset-0 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
+            class="absolute inset-0 w-full h-full pointer-events-none"
           ></iframe>
+
+          <a href="https://www.google.com/maps/search/?api=1&query=Impactus+Training+Center,+Araruama" 
+             target="_blank" 
+             rel="noopener" 
+             class="absolute inset-0 z-10 block cursor-pointer"
+             title="Abrir no aplicativo do Google Maps">
+          </a>
+          
         </div>
       </div>
 
