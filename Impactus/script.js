@@ -1,10 +1,10 @@
 const modalities = [
-  { id: 'boxe', name: 'Boxe', category: 'lutas', short: 'Técnica de golpes, jogo de pernas e alto gasto calórico.', description: 'Fundamentos de boxe com foco em técnica de golpes, esquiva e jogo de pernas. Uma aula de alta intensidade que trabalha condicionamento, coordenação e confiança — sem foco em competição.' },
-  { id: 'muaythai', name: 'Muay Thai', category: 'lutas', short: 'A arte das oito armas com foco em fundamentos e disciplina.', description: 'Prioridade aos fundamentos técnicos do Muaythai. Foco na evolução do aluno com aprendizado, prática e acompanhamento. Preparação para graduação opcional. Ensino focado em disciplina, não em competição.' },
-  { id: 'muaythaikids', name: 'Muay Thai Kids', category: 'lutas', short: 'Segurança, atenção e acolhimento para crianças a partir de 8 anos.', description: 'Aulas formativas e lúdicas desenhadas exclusivamente para os pequenos. Ensinamos coordenação motora, respeito e disciplina da arte marcial em um ambiente 100% seguro, familiar e monitorado de perto.' },
-  { id: 'nogi', name: 'Grappling / No-Gi', category: 'lutas', short: 'Controle de solo, alavancas e estratégia corporal.', description: 'Fundamentos de lutas de agarre. Excelente para raciocínio tático aliado à resistência física e ao controle sob pressão.' },
-  { id: 'pilates', name: 'Pilates', category: 'corpo-mente', short: 'Fortalecimento do core, postura e conexão corporal.', description: 'Aulas focadas no fortalecimento profundo, alinhamento postural e mobilidade. Ideal para prevenir lesões, melhorar a consciência corporal e complementar os treinos de alta intensidade.' },
-  { id: 'alongamento', name: 'Alongamento', category: 'corpo-mente', short: 'Flexibilidade, alívio de tensões e recuperação ativa.', description: 'Sessões dedicadas a aumentar a flexibilidade articular, aliviar as tensões do dia a dia e acelerar a recuperação muscular, promovendo um bem-estar geral pro seu corpo.' },
+  { id: 'boxe', name: 'Boxe', category: 'lutas', image: 'boxe.jpg', short: 'Técnica de golpes, jogo de pernas e alto gasto calórico.', description: 'Fundamentos de boxe com foco em técnica de golpes, esquiva e jogo de pernas. Uma aula de alta intensidade que trabalha condicionamento, coordenação e confiança — sem foco em competição.' },
+  { id: 'muaythai', name: 'Muay Thai', category: 'lutas', image: 'muaythai.jpg', short: 'A arte das oito armas com foco em fundamentos e disciplina.', description: 'Prioridade aos fundamentos técnicos do Muaythai. Foco na evolução do aluno com aprendizado, prática e acompanhamento. Preparação para graduação opcional. Ensino focado em disciplina, não em competição.' },
+  { id: 'muaythaikids', name: 'Muay Thai Kids', category: 'lutas', image: 'muaythaikids.jpg', short: 'Segurança, atenção e acolhimento para crianças a partir de 8 anos.', description: 'Aulas formativas e lúdicas desenhadas exclusivamente para os pequenos. Ensinamos coordenação motora, respeito e disciplina da arte marcial em um ambiente 100% seguro, familiar e monitorado de perto.' },
+  { id: 'nogi', name: 'Grappling / No-Gi', category: 'lutas', image: 'nogi.jpg', short: 'Controle de solo, alavancas e estratégia corporal.', description: 'Fundamentos de lutas de agarre. Excelente para raciocínio tático aliado à resistência física e ao controle sob pressão.' },
+  { id: 'pilates', name: 'Pilates', category: 'corpo-mente', image: 'pilates.jpg', short: 'Fortalecimento do core, postura e conexão corporal.', description: 'Aulas focadas no fortalecimento profundo, alinhamento postural e mobilidade. Ideal para prevenir lesões, melhorar a consciência corporal e complementar os treinos de alta intensidade.' },
+  { id: 'alongamento', name: 'Alongamento', category: 'corpo-mente', image: 'alongamento.jpg', short: 'Flexibilidade, alívio de tensões e recuperação ativa.', description: 'Sessões dedicadas a aumentar a flexibilidade articular, aliviar as tensões do dia a dia e acelerar a recuperação muscular, promovendo um bem-estar geral pro seu corpo.' },
 ];
 
 const categoryLabels = { 'lutas': 'Lutas', 'corpo-mente': 'Corpo & Mente' };
@@ -20,7 +20,9 @@ function renderModalities() {
   const grid = document.getElementById('modalities-grid');
   grid.innerHTML = modalities.map(m => `
     <article class="modality-card bg-paper border border-line flex flex-col" data-category="${m.category}">
-      ${photoPlaceholderHTML('FOTO DE ' + m.name.toUpperCase() + ' AQUI')}
+      <div class="w-full aspect-[4/3] relative overflow-hidden bg-line">
+        <img src="${m.image}" alt="${m.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+      </div>
       <div class="p-6 flex flex-col flex-1">
         <p class="text-xs uppercase tracking-[0.14em] text-bronze font-semibold mb-2">${categoryLabels[m.category]}</p>
         <h3 class="font-display font-bold text-xl text-ink mb-2.5">${m.name}</h3>
@@ -84,11 +86,59 @@ document.getElementById('modal-cta').addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
 const schedule = [
-  { day: 'Segunda', classes: [{ time: '08h00', name: 'Muaythai & Boxe', level: 'Iniciantes' }, { time: '09h, 16h, 17h', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, { time: '18h00', name: 'Muaythai & Boxe', level: 'Iniciantes' }, { time: '19h00', name: 'Muaythai & Boxe', level: 'Todos (Exceto App)' }] },
-  { day: 'Terça', classes: [{ time: '18h00', name: 'Muaythai Kids', level: '6 a 11 anos' }, { time: '20h00', name: 'Muaythai & Boxe', level: 'Inic./Todos' }] },
-  { day: 'Quarta', classes: [{ time: '08h00', name: 'Muaythai & Boxe', level: 'Iniciantes' }, { time: '09h, 16h, 17h', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, { time: '18h00', name: 'Muaythai & Boxe', level: 'Iniciantes' }, { time: '19h00', name: 'Muaythai & Boxe', level: 'Todos (Exceto App)' }] },
-  { day: 'Quinta', classes: [{ time: '18h00', name: 'Muaythai Kids', level: '6 a 11 anos' }, { time: '20h00', name: 'Muaythai & Boxe', level: 'Inic./Todos' }] },
-  { day: 'Sexta', classes: [{ time: '19h00', name: 'Muaythai & Boxe', level: 'Todos os níveis' }] }
+  { 
+    day: 'Segunda', 
+    classes: [
+      { time: '08h00', name: 'Muay Thai / Boxe', level: 'Iniciantes' }, 
+      { time: '09h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '16h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '17h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '18h00', name: 'Muay Thai / Boxe', level: 'Iniciantes' }, 
+      { time: '19h00', name: 'Muay Thai / Boxe', level: 'Todos os níveis' }
+    ] 
+  },
+  { 
+    day: 'Terça', 
+    classes: [
+      { time: '09h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '16h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '17h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '18h00', name: 'Muay Thai Kids', level: '6 a 11 anos' },
+      { time: '19h00', name: 'Muay Thai', level: 'Todos os níveis' },
+      { time: '20h00', name: 'Muay Thai / Boxe', level: 'Iniciante / Todos' }
+    ] 
+  },
+  { 
+    day: 'Quarta', 
+    classes: [
+      { time: '08h00', name: 'Muay Thai / Boxe', level: 'Iniciantes' }, 
+      { time: '09h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '16h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '17h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' }, 
+      { time: '18h00', name: 'Muay Thai / Boxe', level: 'Iniciantes' }, 
+      { time: '19h00', name: 'Muay Thai / Boxe', level: 'Todos os níveis' }
+    ] 
+  },
+  { 
+    day: 'Quinta', 
+    classes: [
+      { time: '09h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '16h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '17h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '18h00', name: 'Muay Thai Kids', level: '6 a 11 anos' },
+      { time: '19h00', name: 'Muay Thai', level: 'Todos os níveis' },
+      { time: '20h00', name: 'Muay Thai / Boxe', level: 'Iniciante / Todos' }
+    ] 
+  },
+  { 
+    day: 'Sexta', 
+    classes: [
+      { time: '09h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '16h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '17h00', name: 'Grupos Pequenos', level: 'Até 8 alunos' },
+      { time: '19h00', name: 'Muay Thai / Boxe', level: 'Todos os níveis' }
+    ] 
+  }
 ];
 
 function renderSchedule() {
