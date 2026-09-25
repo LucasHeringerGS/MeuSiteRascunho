@@ -1,3 +1,5 @@
+//MODALIDADES
+
 const modalities = [
   { id: 'boxe', name: 'Boxe', category: 'lutas', image: 'boxe.webp', short: 'Técnica de golpes, jogo de pernas e alto gasto calórico.', description: 'Fundamentos de boxe com foco em técnica de golpes, esquiva e jogo de pernas. Uma aula de alta intensidade que trabalha condicionamento, coordenação e confiança — sem foco em competição.' },
   { id: 'muaythai', name: 'Muay Thai', category: 'lutas', image: 'muaythai.webp', short: 'A arte das oito armas com foco em fundamentos e disciplina.', description: 'Prioridade aos fundamentos técnicos do Muaythai. Foco na evolução do aluno com aprendizado, prática e acompanhamento. Preparação para graduação opcional. Ensino focado em disciplina, não em competição.' },
@@ -7,13 +9,8 @@ const modalities = [
 
 const categoryLabels = { 'lutas': 'Lutas', 'corpo-mente': 'Corpo & Mente' };
 
-function photoPlaceholderHTML(text) {
-  return `<div class="photo-frame aspect-[4/3] w-full flex flex-col items-center justify-center gap-3 px-4 text-center">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" class="text-mist"><path d="M4 8.5C4 7.67 4.67 7 5.5 7H7.8L8.6 5.4C8.86 4.87 9.4 4.5 10 4.5H14C14.6 4.5 15.14 4.87 15.4 5.4L16.2 7H18.5C19.33 7 20 7.67 20 8.5V17.5C20 18.33 19.33 19 18.5 19H5.5C4.67 19 4 18.33 4 17.5V8.5Z" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="13" r="3.2" stroke="currentColor" stroke-width="1.3"/></svg>
-      <span class="text-[10px] uppercase tracking-[0.14em] text-mist font-semibold leading-snug">${text}</span>
-    </div>`;
-}
 
+//RENDERIZAÇÃO: MODALIDADES E FILTROS
 function renderModalities() {
   const grid = document.getElementById('modalities-grid');
   grid.innerHTML = modalities.map(m => `
@@ -35,28 +32,36 @@ function renderModalities() {
   });
 }
 
+//botões de filtro
 const filterTabs = document.getElementById('filter-tabs');
 filterTabs.addEventListener('click', (e) => {
   const btn = e.target.closest('.tab-btn');
   if (!btn) return;
+  
   filterTabs.querySelectorAll('.tab-btn').forEach(b => b.dataset.active = 'false');
   btn.dataset.active = 'true';
+  
   const filter = btn.dataset.filter;
   document.querySelectorAll('.modality-card').forEach(card => {
     card.dataset.hidden = (filter === 'todas' || card.dataset.category === filter) ? 'false' : 'true';
   });
 });
 
+
+//saber mais
 const backdrop = document.getElementById('modal-backdrop');
 const panel = document.getElementById('modal-panel');
 
 function openModal(id) {
   const m = modalities.find(x => x.id === id);
   if (!m) return;
+  
+  // Preenche os textos do modal com os dados da modalidade clicada
   document.getElementById('modal-category').textContent = categoryLabels[m.category];
   document.getElementById('modal-title').textContent = m.name;
   document.getElementById('modal-description').textContent = m.description;
   
+  // Animação de abertura
   backdrop.classList.remove('hidden');
   requestAnimationFrame(() => {
     backdrop.classList.add('flex');
@@ -64,25 +69,29 @@ function openModal(id) {
     panel.style.opacity = '1';
     panel.style.transform = 'scale(1)';
   });
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden'; // Trava o scroll do site
 }
 
 function closeModal() {
+  // Animação de fechamento
   backdrop.style.opacity = '0';
   panel.style.opacity = '0';
   panel.style.transform = 'scale(0.95)';
   setTimeout(() => {
     backdrop.classList.add('hidden');
     backdrop.classList.remove('flex');
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''; // Destrava o scroll do site
   }, 250);
 }
 
+// Eventos para fechar o modal (Clicar no X, clicar fora da caixa ou apertar ESC)
 document.getElementById('modal-close').addEventListener('click', closeModal);
 backdrop.addEventListener('click', (e) => { if (e.target === backdrop) closeModal(); });
 document.getElementById('modal-cta').addEventListener('click', closeModal);
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
+
+// grade de horarios
 const schedule = [
   { 
     day: 'Segunda', 
@@ -139,6 +148,8 @@ const schedule = [
   }
 ];
 
+//renderizaçao grade de horarios
+
 function renderSchedule() {
   const grid = document.getElementById('schedule-grid');
   grid.innerHTML = schedule.map(d => `
@@ -151,9 +162,11 @@ function renderSchedule() {
   `).join('');
 }
 
+//carregamento site
 renderModalities();
 renderSchedule();
 
+// controle do menu mobile
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const bars = document.querySelectorAll('.menu-bar');
@@ -189,6 +202,8 @@ document.querySelectorAll('.mobile-link').forEach(link => {
   });
 });
 
+
+//rolar tela
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
