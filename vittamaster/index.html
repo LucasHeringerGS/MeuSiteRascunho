@@ -1,86 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vitta Master Pró - Studio 40+</title>
-    <!-- Aqui fazemos a ligação com o arquivo CSS -->
+    <title>Vitta Master Pró | Studio de Treino 40+</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Cabeçalho / Hero Section -->
-    <header>
-        <div class="container">
-            <h1>Vitta Master Pró</h1>
-            <h2>Studio especializado no público 40+</h2>
-            <p>Musculação, funcional e pilates integrados em um treinamento seguro, eficiente e pensado para você.</p>
-            <a href="https://wa.me/5521969459657" class="btn">Faça já sua reserva</a>
+    <!-- HERO -->
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="logo-text">VITTA MASTER <span class="destaque-pro">pró</span></h1>
+            <h2 class="hero-title">O seu corpo não precisa de uma academia cheia. Precisa de atenção.</h2>
+            <p class="hero-subtitle">Um Studio de treino exclusivo para o público 40+. Musculação, funcional e pilates integrados num ambiente acolhedor, seguro e focado na sua vitalidade.</p>
+            <a href="https://wa.me/5521969459657" class="btn btn-primary">Falar com a nossa equipe</a>
         </div>
     </header>
 
-    <!-- 2. Sobre a Metodologia -->
-    <section id="sobre">
-        <div class="container">
-            <h2>Não é academia convencional e não é fisioterapia</h2>
-            <p>Somos um espaço acolhedor com infraestrutura confortável e aconchegante.</p>
-            <p>É uma metodologia que integra os principais treinamentos para força, resistência e mobilidade. Utilizamos recursos da musculação, do funcional e do Pilates conforme a necessidade de cada aluno.</p>
-        </div>
-    </section>
-
-    <!-- 3. Os Nossos Pilares -->
-    <section id="pilares">
-        <div class="container">
-            <h2>Um único método de treinamento</h2>
-            <div class="grid-cards">
-                <div class="card">
-                    <h3>Musculação</h3>
-                    <p>Proporciona a força que sustenta a sua vida. Gera força e autonomia para as tarefas do dia a dia.</p>
-                </div>
-                <div class="card">
-                    <h3>Funcional</h3>
-                    <p>Movimento com propósito. Melhora a mobilidade, aumenta o equilíbrio, reduz dores e previne quedas.</p>
-                </div>
-                <div class="card">
-                    <h3>Pilates</h3>
-                    <p>A mobilidade que transforma. Foco total em melhorar a sua postura e o seu bem-estar geral.</p>
-                </div>
+    <!--  1 -->
+    <section class="section-sobre">
+        <div class="container sobre-grid">
+            <div class="sobre-texto">
+                <span class="tag">A Nossa Essência</span>
+                <h2>Esqueça os treinos genéricos e os ambientes intimidadores.</h2>
+                <p>Sabemos que, a partir de certa idade, o objetivo muda. Não se trata apenas de estética, mas de <strong>força para o dia a dia, autonomia e viver sem dores</strong>.</p>
+                <p>A Vitta Master não é uma academia convencional nem uma clínica de fisioterapia. Somos um espaço onde o treino é feito no seu tempo, respeitando as suas articulações e o seu histórico.</p>
+                <ul class="lista-beneficios">
+                    <li>✔️ Turmas reduzidas e ambiente tranquilo</li>
+                    <li>✔️ Acompanhamento próximo do professor</li>
+                    <li>✔️ Metodologia adaptada à sua realidade</li>
+                </ul>
+            </div>
+            <div class="sobre-imagem">
+                <!-- -->
+                <img src="foto.jpg" alt="VAMOS COLOCAR UMA FOTO AQUI">
             </div>
         </div>
     </section>
 
-    <!-- 4. Nossos Diferenciais -->
-    <section id="diferenciais" class="bg-claro">
-        <div class="container">
-            <h2>Não é circuito genérico</h2>
-            <div class="grid-cards">
-                <div class="card">
-                    <h3>Grupos Reduzidos</h3>
-                    <p>Treino semi-personalizado. Mais atenção individual e muito mais segurança na execução dos movimentos.</p>
-                </div>
-                <div class="card">
-                    <h3>Treinos Adaptados</h3>
-                    <p>Cada aluno evolui no seu tempo e necessidade, com profissionais capacitados acompanhando de perto.</p>
-                </div>
-                <div class="card">
-                    <h3>Evolução Constante</h3>
-                    <p>Ajustes são feitos sempre que necessário para garantir os melhores resultados na sua saúde.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. Rodapé / Contatos -->
-    <footer>
-        <div class="container">
-            <h3>Venha fazer parte da família Vitta Master</h3>
-            <p>Agende sua primeira aula conosco e mude sua qualidade de vida.</p>
-            <br>
-            <p>📍 Espaço Matheus Dias</p>
-            <p>📱 WhatsApp: (21) 96945-9657</p>
-            <p>📷 Instagram: @vittamasterpro</p>
+    <!-- METODOLOGIA INTEGRADA -->
+    <section class="section-metodologia bg-claro">
+        <div class="container text-center">
+            <span class="tag">Os Nossos Pilares</span>
+            <h2>Um único método, três pilares fundamentais</h2>
+            <p class="subtitulo-secao">Combinamos o melhor de três mundos para garantir ganho de mobilidade, prevenção de quedas e fortalecimento dos músculos.</p>
             
-            <p class="slogan">Saúde hoje. Mais histórias amanhã.</p>
+            <div class="cards-metodo">
+                <!-- PILAR 1 -->
+                <div class="card">
+                    <!-- DICA DE FOTO: Alguém a fazer musculação com peso leve, sorrindo -->
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Musculação Vitta Master">
+                    <div class="card-content">
+                        <h3>Musculação</h3>
+                        <p>Focada em fortalecer os músculos para proteger as suas articulações e dar-lhe total autonomia diária.</p>
+                    </div>
+                </div>
+                <!-- PILAR 2 -->
+                <div class="card">
+                    <!-- DICA DE FOTO: Aluno a fazer exercício de equilíbrio/funcional -->
+                    <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Treino Funcional Vitta Master">
+                    <div class="card-content">
+                        <h3>Treino Funcional</h3>
+                        <p>Movimento com propósito. para melhorar seu equilíbrio, sua coordenação motora e previnir quedas no dia a dia.</p>
+                    </div>
+                </div>
+                <!-- PILAR 3 -->
+                <div class="card">
+                    <!-- DICA DE FOTO: Aluno no equipamento de Pilates -->
+                    <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pilates Vitta Master">
+                    <div class="card-content">
+                        <h3>Pilates</h3>
+                        <p>A mobilidade que transforma. Essencial para corrigir a postura, aliviar tensões crónicas e promover o bem-estar mental e físico.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA / ESPAÇO -->
+    <section class="section-espaco">
+        <div class="container text-center">
+            <h2>Sinta-se em casa. O nosso espaço foi pensado para si.</h2>
+            <p class="subtitulo-secao">Infraestrutura confortável, climatizada e acolhedora.</p>
+            
+            <div class="galeria">
+                <!-- DICA: Coloque aqui fotos bonitas do interior do Studio -->
+                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Espaço interno">
+                <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Equipamentos">
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMUNIDADE (Importância Social) -->
+    <section class="section-comunidade bg-verde-escuro text-center">
+        <div class="container">
+            <span class="tag tag-clara">Comunidade e Amizade</span>
+            <h2 class="texto-branco">Muito mais do que um lugar para treinar. Um espaço para fazer amigos.</h2>
+            <p class="subtitulo-secao texto-claro-fundo-escuro">Sabemos que a saúde vai muito além do físico. Na Vitta Master, a saúde mental e a socialização caminham juntas. O nosso ambiente intimista e as turmas reduzidas favorecem conversas, trocas de experiências e a criação de laços reais. Venha pelo treino, fique pela excelente companhia.</p>
+            
+            <!-- DICA DE FOTO: Alunos conversando, rindo juntos ou tomando um café no studio -->
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Alunos rindo e conversando" class="img-comunidade">
+        </div>
+    </section>
+
+
+    <!-- SEÇÃO DEPOIMENTOS -->
+    <section class="section-depoimentos bg-claro">
+        <div class="container text-center">
+            <span class="tag">Histórias Reais</span>
+            <h2>O que dizem os nossos alunos</h2>
+            <p class="subtitulo-secao">A maior prova da nossa metodologia é a transformação na rotina de quem treina conosco.</p>
+            
+            <div class="cards-depoimentos">
+                <!-- Depoimento Placeholder 1 -->
+                <div class="card-depoimento">
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <p class="texto-depoimento">"Em breve, este espaço será preenchido com a história de um aluno que recuperou a sua autonomia, deixou de sentir dores nas costas e encontrou novos amigos aqui no Studio."</p>
+                    <p class="autor-depoimento"><strong>- Aluno(a) Vitta Master</strong></p>
+                </div>
+                
+                <!-- Depoimento Placeholder 2 -->
+                <div class="card-depoimento">
+                    <div class="estrelas">⭐⭐⭐⭐⭐</div>
+                    <p class="texto-depoimento">"Aqui colocaremos o relato de alguém que detestava o ambiente de academias lotadas e finalmente encontrou um lugar acolhedor e seguro para cuidar da saúde."</p>
+                    <p class="autor-depoimento"><strong>- Aluno(a) Vitta Master</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION FINAL -->
+    <section class="section-cta bg-verde-escuro">
+        <div class="container text-center">
+            <h2>Pronto para investir na sua saúde e longevidade?</h2>
+            <p>Agende a sua primeira aula conosco. Junte-se à família Vitta Master e descubra como é treinar num lugar que realmente se importa com você.</p>
+            <a href="https://wa.me/5521969459657" class="btn btn-secundario">Quero agendar a minha aula</a>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-marca">
+                <h3>Vitta Master Pró</h3>
+                <p class="slogan">Saúde hoje. Mais histórias amanhã.</p>
+            </div>
+            <div class="footer-contato">
+                <h4>Contactos</h4>
+                <p>📍 Espaço Matheus Dias</p>
+                <p>📱 WhatsApp: (21) 96945-9657</p>
+                <p>📷 Instagram: <a href="https://instagram.com/vittamasterpro">@vittamasterpro</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vitta Master Pró. Todos os direitos reservados.</p>
         </div>
     </footer>
 
