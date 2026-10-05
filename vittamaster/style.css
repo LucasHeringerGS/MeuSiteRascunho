@@ -120,6 +120,14 @@ h2 {
 /* ==========================================================================
    1. Hero Section (Fundo com Imagem)
    ========================================================================== */
+
+.logo-img {
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 30px auto;
+    display: block;
+}
+
 .hero {
     position: relative;
     /* DICA: Troque o URL abaixo por uma foto real e escura do seu ginásio */
