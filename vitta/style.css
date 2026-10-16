@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Variáveis de Cores (Paleta Premium e Acolhedora)
+   Variáveis de Cores
    ========================================================================== */
    :root {
     --verde-escuro: #173f32;    /* Tom principal, transmite segurança */
@@ -118,7 +118,7 @@ h2 {
 }
 
 /* ==========================================================================
-   1. Hero Section (Fundo com Imagem)
+   1. Hero Section
    ========================================================================== */
 
 .logo-img {
@@ -130,7 +130,7 @@ h2 {
 
 .hero {
     position: relative;
-    /* DICA: Troque o URL abaixo por uma foto real e escura do seu ginásio */
+    /*/foto de fundo aqui*/ 
     background: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
     padding: 120px 20px;
     text-align: center;
@@ -315,14 +315,14 @@ h2 {
     text-align: left;
 }
 
-/* Um pequeno detalhe visual para dar charme ao card de depoimento */
+/* detalhe visual card de depoimento */
 .card-depoimento::before {
     content: "“";
     position: absolute;
     top: 10px;
     left: 20px;
     font-size: 5rem;
-    color: rgba(139, 186, 130, 0.2); /* Verde claro transparente */
+    color: rgba(139, 186, 130, 0.2);
     font-family: 'Lora', serif;
     line-height: 1;
 }
@@ -364,7 +364,7 @@ h2 {
 }
 
 footer {
-    background-color: #112d24; /* Verde ainda mais escuro para o rodapé */
+    background-color: #112d24; 
     color: rgba(255,255,255,0.8);
     padding: 60px 0 20px 0;
 }
@@ -398,7 +398,7 @@ footer h3, footer h4 {
 }
 
 /* ==========================================================================
-   Responsividade (Ecrãs pequenos / Telemóveis)
+   Responsividade mobile
    ========================================================================== */
 @media (max-width: 768px) {
     .hero-title { font-size: 2.2rem; }
