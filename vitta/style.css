@@ -1,6 +1,6 @@
 /* ==========================================================================
    Variáveis de Cores
-   ========================================================================== */
+========================================================================== */
 :root {
     --verde-escuro: #173f32;
     --verde-medio: #2a694d;
@@ -485,54 +485,144 @@ h2 {
 }
 
 /* ==========================================================================
-   Seção Depoimentos
+   Seção Depoimentos Atualizada
    ========================================================================== */
 .cards-depoimentos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
     margin-top: 20px;
+    margin-bottom: 45px;
 }
 
 .card-depoimento {
     background-color: var(--branco);
-    padding: 40px 30px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    position: relative;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(23, 63, 50, 0.05);
 }
 
-.card-depoimento::before {
-    content: "“";
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    font-size: 5rem;
-    color: rgba(139, 186, 130, 0.2);
-    font-family: 'Lora', serif;
-    line-height: 1;
+.depoimento-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.autor-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.autor-info {
+    flex-grow: 1;
+}
+
+.autor-info strong {
+    display: block;
+    color: var(--verde-escuro);
+    font-size: 1.05rem;
+}
+
+.tempo-depoimento {
+    font-size: 0.82rem;
+    color: var(--texto-claro);
+}
+
+.google-badge {
+    width: 22px;
+    height: 22px;
 }
 
 .estrelas {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
     margin-bottom: 15px;
-    position: relative;
-    z-index: 2;
+    letter-spacing: 2px;
 }
 
 .texto-depoimento {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: italic;
     color: var(--texto-escuro);
+    line-height: 1.6;
     margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
+    flex-grow: 1;
 }
 
-.autor-depoimento {
-    font-size: 1rem;
+.link-review-origem {
+    font-size: 0.88rem;
+    font-weight: 700;
     color: var(--verde-medio);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.link-review-origem:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
+}
+
+/* Área de botões no rodapé da seção */
+.depoimentos-acoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-outline-depoimento {
+    background-color: transparent;
+    color: var(--verde-escuro);
+    border: 2px solid var(--verde-escuro);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-depoimento:hover {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    transform: translateY(-2px);
+}
+
+.btn-avaliar-google {
+    background-color: var(--verde-medio);
+    color: var(--branco);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(42, 105, 77, 0.2);
+}
+
+.btn-avaliar-google:hover {
+    background-color: #21533c;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .depoimentos-acoes {
+        flex-direction: column;
+        width: 100%;
+    }
+    .btn-outline-depoimento,
+    .btn-avaliar-google {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* ==========================================================================
